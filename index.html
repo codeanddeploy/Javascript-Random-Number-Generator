@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Random Numbers Generator</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="main.min.css">
+</head>
+<body>
+	<div class="container-fluid py-5">
+		<div class="row">
+			<div class="col-md-8 offset-md-2">
+				<h2 class="title text-center">Random Numbers Generator</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8 offset-md-2">
+				<form id="startNumbersGeneratorForm">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="from_balls">From Balls</label>
+								<input type="number" name="from_balls" class="form-control" value="5" aria-describedby="fromBallsHelp" min="0">
+								<small id="fromBallsHelp" class="form-text text-muted">Enter the maximum number for balls. Ex: 6.</small>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="range_numbers">From Interval Numbers</label>
+								<input type="number" name="range_numbers" class="form-control" value="45" aria-describedby="rangeNumbersHelp" min="0">
+								<small id="rangeNumbersHelp" class="form-text text-muted">Enter the maximum value for interval of numbers. Ex: 49.</small>
+							</div>
+						</div>
+					</div>
+					<div class="row">	
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="extra_balls">Extra Balls</label>
+								<input type="number" name="extra_balls" class="form-control" value="1" aria-describedby="extraBallsHelp" min="0">
+								<small id="extraBallsHelp" class="form-text text-muted">Enter the maximum number for extra balls. Ex: 2.</small>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="range_extra_numbers">Extra Interval Numbers</label>
+								<input type="number" name="range_extra_numbers" class="form-control" value="20" aria-describedby="rangeExtraNumbersHelp" min="0">
+								<small id="rangeExtraNumbersHelp" class="form-text text-muted">Enter the maximum value for interval of extra numbers. Ex: 20.</small>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Generate Numbers" name="generate_numbers" class="btn btn-block">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="generic-box generator numbers-generator">
+			<div id="generatorResults" class="col-md-8 offset-md-2"></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/numbers_generator.min.js"></script>
+</body>
+</html>
